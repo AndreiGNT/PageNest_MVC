@@ -81,14 +81,15 @@ namespace BulkyWeb.Areas.Admin.Controllers
                 if (productVM.Product.Id == 0)
                 {
                     _unitOfWork.Product.Add(productVM.Product);
+                    TempData["success"] = "Product created successfully.";
                 }
                 else
                 {
                     _unitOfWork.Product.Update(productVM.Product);
+                    TempData["success"] = "Product updated successfully.";
                 }
 
                 _unitOfWork.Save();
-                TempData["success"] = "Product created successfully.";
                 return RedirectToAction("Index");
             }
             else
@@ -102,38 +103,6 @@ namespace BulkyWeb.Areas.Admin.Controllers
                 return View();
             }
         }
-
-        //public IActionResult Delete(int? id)
-        //{
-        //    if (id == null || id == 0)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    Product? productFromDb = _unitOfWork.Product.Get(u => u.Id == id);
-
-        //    if (productFromDb == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    return View(productFromDb);
-        //}
-
-        //[HttpPost, ActionName("Delete")]
-        //public IActionResult DeletePOST(int? id)
-        //{
-        //    Product? obj = _unitOfWork.Product.Get(u => u.Id == id);
-
-        //    if (obj == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    _unitOfWork.Product.Remove(obj);
-        //    _unitOfWork.Save();
-        //    TempData["success"] = "Product deleted successfully.";
-        //    return RedirectToAction("Index");
-        //}
 
         #region API CALLS
 
