@@ -14,6 +14,7 @@ namespace Bulky.DataAccess.Data
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Company> Companies { get; set; }
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -110,6 +111,39 @@ namespace Bulky.DataAccess.Data
                     Price100 = 20,
                     CategoryId = 2,
                     ImageUrl = ""
+                }
+                );
+
+            modelBuilder.Entity<Company>().HasData(
+                new Company
+                {
+                    Id = 1,
+                    Name = "Cedacri Internation",
+                    StreetAddress = "Bulevardul Stefan Cel Mare si Sfint 171",
+                    City = "Chisinau",
+                    State = "Centru",
+                    PostalCode = "2075",
+                    PhoneNumber = "+373 78919799"
+                },
+                new Company
+                {
+                    Id = 2,
+                    Name = "Local",
+                    StreetAddress = "Calea Iesilor 4",
+                    City = "Chisinau",
+                    State = "Buiucani",
+                    PostalCode = "2075",
+                    PhoneNumber = "+373 78235421"
+                },
+                new Company
+                {
+                    Id = 3,
+                    Name = "Zity Mall",
+                    StreetAddress = "Calea Iesilor 7",
+                    City = "Chisinau",
+                    State = "Buiucani",
+                    PostalCode = "2075",
+                    PhoneNumber = "+373 68443541"
                 }
                 );
         }
