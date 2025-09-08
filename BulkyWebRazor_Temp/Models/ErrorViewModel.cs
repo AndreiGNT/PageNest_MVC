@@ -1,4 +1,4 @@
-﻿namespace BulkyWebRazor_Temp.Models
+﻿namespace PageNestWebRazor_Temp.Models
 {
     public class ErrorViewModel
     {

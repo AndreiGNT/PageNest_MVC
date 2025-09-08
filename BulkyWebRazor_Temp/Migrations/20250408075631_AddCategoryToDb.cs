@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace BulkyWebRazor_Temp.Migrations
+namespace PageNestWebRazor_Temp.Migrations
 {
     /// <inheritdoc />
     public partial class AddCategoryToDb : Migration

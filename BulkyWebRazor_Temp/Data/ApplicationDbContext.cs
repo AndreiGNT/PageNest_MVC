@@ -1,7 +1,7 @@
-﻿using BulkyWebRazor_Temp.Models;
+﻿using PageNestWebRazor_Temp.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace BulkyWebRazor_Temp.Data
+namespace PageNestWebRazor_Temp.Data
 {
     public class ApplicationDbContext : DbContext
     {

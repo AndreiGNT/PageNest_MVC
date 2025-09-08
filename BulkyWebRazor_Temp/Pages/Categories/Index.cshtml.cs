@@ -1,8 +1,8 @@
-using BulkyWebRazor_Temp.Data;
-using BulkyWebRazor_Temp.Models;
+using PageNestWebRazor_Temp.Data;
+using PageNestWebRazor_Temp.Models;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace BulkyWebRazor_Temp.Pages.Categories
+namespace PageNestWebRazor_Temp.Pages.Categories
 {
     public class IndexModel : PageModel
     {

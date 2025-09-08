@@ -1,4 +1,4 @@
-using BulkyWebRazor_Temp.Data;
+using PageNestWebRazor_Temp.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
